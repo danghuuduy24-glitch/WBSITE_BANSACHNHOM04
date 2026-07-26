@@ -1,0 +1,126 @@
+/*Sinh viên code: Võ Thanh Trường */
+.page__main {
+    width: 95%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+.article__section {
+    margin-bottom: 45px;
+}
+.article__title {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #b8863b;
+    color: #1b2a20;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 28px;
+}
+.section__title {
+    margin-bottom: 15px;
+    color: #3f5a45;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 22px;
+}
+/* Tiêu đề phụ có thêm viền bên trái */
+.section__title--secondary {
+    padding-left: 12px;
+    border-left: 5px solid #b8863b;
+}
+/* Sau phần giới thiệu sẽ tự động xóa float */
+.about-section::after {
+    content: ""; /* Tạo phần tử giả */
+    display: block; /* Hiển thị dạng block */
+    clear: both;/* Xóa hiệu ứng float */
+}
+.section__image--float-left {
+    float: left;
+    width: 280px;
+    height: 160px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    object-fit: cover;/* Hiển thị ảnh đầy đủ, không méo */
+}
+.section__content {
+    line-height: 1.8;
+    text-align: justify;
+}
+.section__div-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);/* Chia thành 3 cột bằng nhau */
+    gap: 20px;/* Khoảng cách giữa các ô */
+}
+.category-card {
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+/* Khi đưa chuột vào thẻ */
+.category-card:hover {
+    transform: translateY(-5px);
+}
+/* Văn học */
+.category1 {
+    background: linear-gradient(135deg, #7a2e2e, #4f1c1c); /* Nền chuyển màu đỏ */
+}
+/* Kinh tế */
+.category2 {
+    background: linear-gradient(135deg, #b8863b, #7c5a24);
+}
+/* Thiếu nhi */
+.category3 {
+    background: linear-gradient(135deg, #3f5a45, #23332a);
+}
+/* Kỹ năng sống */
+.category4 {
+    background: linear-gradient(135deg, #8c5e3c, #5a3a22);
+}
+/* Truyện tranh */
+
+.category5 {
+    background: linear-gradient(135deg, #5b4636, #34281d);
+}
+/* Lịch sử */
+.category6 {
+    background: linear-gradient(135deg, #4a4036, #241f1a);
+}
+/*ưu điểm */
+.section__div-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);/* Hiển thị 4 cột */
+    gap: 20px;/* Khoảng cách giữa các ô */
+}
+.feature-item {
+    padding: 20px;
+    border-top: 4px solid #b8863b;
+    border-radius: 8px;
+    background-color: white;
+}
+.feature-item h3 {
+    margin-bottom: 10px;
+    color: #1b2a20;
+}
+.feature-item p {
+    color: #555;
+    line-height: 1.5;
+}
+/* Khi màn hình nhỏ hơn hoặc bằng 800px */
+@media screen and (max-width: 800px) {
+    .section__image--float-left {
+        float: none;
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+    }
+    .section__div-categories,
+    .section__div-features {
+        grid-template-columns: 1fr; /* Hiển thị 1 cột */
+    }
+}

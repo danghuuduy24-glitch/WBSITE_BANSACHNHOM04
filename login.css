@@ -1,0 +1,114 @@
+/*Sinh viên code: Đặng Hữu Duy */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.page-main {
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f0e4;
+}
+.container {
+    width: 100%;
+    max-width: 430px;
+}
+#loginForm {
+    width: 100%;
+    padding: 35px;
+    border-top: 5px solid #b8863b;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Đổ bóng cho form */
+}
+#loginForm h1 {
+    margin-bottom: 30px;
+    color: #3f5a45;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    text-align: center;
+}
+.input-box {
+    margin-bottom: 22px;
+}
+.input-box label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333333;
+    font-weight: bold;
+}
+.input-box input {
+    width: 100%;
+    height: 46px;
+    padding: 0 15px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+}
+.input-box input:focus {
+    border-color: #b8863b;
+}
+.password-box {
+    position: relative;
+}
+.password-box input {
+    padding-right: 48px;
+}
+#showPassword {
+    position: absolute;  /* Định vị tuyệt đối trong password-box */
+    top: 50%;
+    right: 12px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+    transform: translateY(-50%);/* Căn chính giữa theo chiều dọc */
+}
+.btn {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background-color: #3f5a45;
+    cursor: pointer;/* Con trỏ hình bàn tay */
+    font-size: 16px;
+    font-weight: bold;
+}
+/* Khi đưa chuột vào nút */
+.btn:hover {
+    background-color: #b8863b;
+}
+.login-link {
+    margin-top: 20px;
+    color: #555555;
+    text-align: center;
+}
+/* Liên kết đăng ký */
+.login-link a {
+    color: #3f5a45;
+    font-weight: bold;
+}
+/* Khi di chuột vào liên kết */
+.login-link a:hover {
+    color: #b8863b;
+}
+/* Khi màn hình nhỏ hơn hoặc bằng 768px */
+@media screen and (max-width: 768px) {
+    /* Giảm khoảng cách của khu vực đăng nhập */
+    .page-main {
+        padding: 35px 15px;
+    }
+    /* Giảm khoảng cách bên trong form */
+    #loginForm {
+        padding: 25px;
+    }
+    /* Thu nhỏ tiêu đề */
+    #loginForm h1 {
+        font-size: 26px;
+    }
+}
